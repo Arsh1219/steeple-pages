@@ -67,7 +67,7 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #E6E0D9;
 <header><nav><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></header>
 <main>
 <h1>Privacy Policy for Steeple</h1>
-<p><strong>Last updated: 28 July 2026</strong></p>
+<p><strong>Last updated: 13 August 2026</strong></p>
 <blockquote>
 <p>The operator and the governing jurisdiction were resolved on 28 July 2026 to Billionweb, Singapore, and are stated at the foot of this page.
 If you later change what the app does, change this page in the same commit.</p>
@@ -98,10 +98,12 @@ If you later change what the app does, change this page in the same commit.</p>
 <ul>
 <li>A random <strong>app instance ID</strong>, generated when you install the app. It is not your name, your Apple ID, your phone number or your device's advertising identifier. It is reset if you delete and reinstall the app.</li>
 <li>Your device model, operating system version, app version, and the country or region your connection appears to come from.</li>
-<li>Fifteen events, and no others: opening the app, viewing a verse, viewing an explanation, adding the widget, enabling reminders, opening a reminder, reaching a streak day and its number, using Ask, hitting the free Ask limit, saving a verse, seeing the paywall, starting a trial, subscribing, cancelling, and tapping share.</li>
+<li>Seventeen events, and no others: finishing a step of first time setup, finishing setup and how many seconds it took, viewing a verse, viewing an explanation, adding the widget, answering the reminder permission question either way, opening a reminder, reaching a streak day and its number, using Ask, hitting the free Ask limit, saving a verse, seeing the paywall and which of five places opened it, tapping the trial button, starting a trial, subscribing, tapping share, and tapping the rate button.</li>
+<li>Six general facts about your copy of the app, so the counts above can be read in groups: whether you subscribe, whether reminders are on, whether the widget is installed, roughly how long your streak is as one of four bands rather than the exact number, which translation you read, and which of the app's preset verse text sizes you read at.</li>
 </ul>
 <p><strong>What it does not collect:</strong> which verses you read or save, what you type into Ask, the content of anything, or any identifier that points back to you as a person.</p>
-<p><strong>That last point is built into the app rather than promised.</strong> The only thing an event in Steeple can carry alongside its name is a single whole number, which is used for one thing: the length of your streak. There is no way for a verse, a reference, a saved item or a word you typed to be attached to an event, because the app provides no means of attaching text to one. It is not that we choose not to send it. There is no route.</p>
+<p><strong>That last point is built into the app rather than promised.</strong> An event can carry a small number of extra details, and they are all listed above: a count, a number of seconds, a yes or no, which setup step, or which of the five places the paywall opened from. Every one of them is chosen from a fixed list written into the app, not assembled while it runs.</p>
+<p>There is no way for a verse, a reference, a saved item or a word you typed to be attached to an event, because the app provides no means of attaching such text to one. The part of the app that sends these events accepts only whole numbers and values picked from those fixed lists, and nothing you type can become one. It is not that we choose not to send it. There is no route.</p>
 <p>Firebase Analytics is built here in its version <strong>without the advertising identifier</strong>. The library that reads Apple's IDFA is deliberately not included in the app, and an automated check fails the build if it ever gets added back. This data is not used for advertising, is not linked to an advertising profile, and is not used to track you across other companies' apps or websites.</p>
 <h2>Crash reports</h2>
 <p>Steeple uses <strong>Google Firebase Crashlytics</strong>. If the app crashes, it sends a report so the fault can be fixed.</p>
@@ -125,7 +127,7 @@ If you later change what the app does, change this page in the same commit.</p>
 <p>Please do not type sensitive personal information into Ask. The app shows this reminder on screen every time, and the reason is the cache described above.</p>
 <h2>Purchases</h2>
 <p>Subscriptions are processed by Apple. <strong>We never see and never receive your card number, billing address or Apple ID.</strong></p>
-<p>We use <strong>RevenueCat</strong> to check whether a valid subscription exists. It receives the purchase receipt Apple issues and an anonymous purchase ID that it generates. It does not receive your name or your Apple ID. To manage or cancel, use Settings inside the app or your Apple subscription settings.</p>
+<p>We use <strong>RevenueCat</strong> to check whether a valid subscription exists. It receives the purchase receipt Apple issues and an anonymous purchase ID that it generates. It does not receive your name or your Apple ID. To manage or cancel, use Profile inside the app or your Apple subscription settings.</p>
 <h2>Children</h2>
 <p>Steeple is rated 4+, which means its content is suitable for all ages. It is written for adults and is not directed at children, and it is not published in the App Store Kids Category.</p>
 <p>Steeple has no account, no sign up, no messaging, no user profiles, no advertising and no links to user generated content, so there is no way for a child to give us personal information or to be contacted through the app. The anonymous usage and crash data described above is not personal information about any individual, child or adult, and is never used for advertising or to build a profile.</p>
@@ -147,7 +149,7 @@ If you later change what the app does, change this page in the same commit.</p>
 <tbody>
 <tr>
 <td>Google Firebase Analytics</td>
-<td>anonymous app instance ID, device and app version, coarse region, the fifteen events above</td>
+<td>anonymous app instance ID, device and app version, coarse region, the seventeen events and six general facts above</td>
 <td>to see which features are used</td>
 </tr>
 <tr>
