@@ -67,76 +67,92 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #E6E0D9;
 <header><nav><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></header>
 <main>
 <h1>Privacy Policy for Steeple</h1>
-<p><strong>Last updated: 13 August 2026</strong></p>
-<blockquote>
-<p>The operator and the governing jurisdiction were resolved on 28 July 2026 to Billionweb, Singapore, and are stated at the foot of this page.
-If you later change what the app does, change this page in the same commit.</p>
-</blockquote>
-<p>Steeple is built so that there is very little to collect. There is no account, no login and no profile. This page explains exactly what happens to information when you use the app, including the parts that are not zero.</p>
+<p><strong>Last updated: 10 October 2026</strong></p>
+<p>This page explains what happens to information when you use Steeple: what stays on your iPhone, what leaves it, who receives it, and how to delete it.</p>
 <h2>The short version</h2>
 <ul>
-<li>Steeple does not require an account and never asks for your name, email address or phone number.</li>
-<li>Your streak, your saved verses, your reminder time and your translation choice are stored <strong>only on your device</strong>.</li>
-<li>Steeple contains <strong>no advertising, no ad networks and no attribution software</strong>. It does not read your device's advertising identifier, and it will never ask permission to track you, because it does not track you.</li>
-<li>Steeple <strong>does</strong> collect anonymous usage statistics and crash reports, so that faults can be found and the app improved. These are tied to a random number generated at install, not to you. Details below.</li>
-<li>The one feature that sends anything you have written is <strong>Ask</strong>. Your question goes to our AI provider so it can be answered. Nothing identifying you goes with it.</li>
-<li>Steeple does not sell your information and does not share it with data brokers.</li>
+<li><strong>You can use Steeple without an account.</strong> Everything works signed out, and in that case your verses, favorites, settings and streak stay on your iPhone.</li>
+<li><strong>An account is optional.</strong> If you sign in with Apple or Google and have Premium, Steeple backs up a copy of your data to our cloud database so it follows you to a new phone. You can turn Auto backup off.</li>
+<li><strong>Chat and premium voices send text to our server and to OpenAI</strong> so a reply can be written or read aloud. We do not keep your chat messages on our server.</li>
+<li>We use Google Firebase for usage statistics and crash reports, and RevenueCat to manage subscriptions.</li>
+<li>Steeple shows <strong>no ads</strong>, does not read your device's advertising identifier, does not track you across other companies' apps or websites, and <strong>never sells your information</strong>.</li>
+<li>You can <strong>delete your account and everything synced with it</strong> from inside the app at any time.</li>
 </ul>
-<h2>What is stored on your device</h2>
-<p>The following stays on your iPhone and is never transmitted to us or anyone else:</p>
+<h2>Without an account or backup</h2>
+<p>If you are not signed in, or backup is not running, your data is stored only on your iPhone, in the app's own storage and in a shared container the widgets read. That includes your favorites, collections, your own quotes, reading history, mood check ins, reminders, streak, themes and your answers from first time setup. Deleting the app deletes it, and we have no copy.</p>
+<p>A few features still talk to a server even when you are signed out. They are described below: chat, premium voices, wallpapers from Unsplash, usage statistics, crash reports and purchases.</p>
+<h2>Accounts</h2>
+<p>You can create an account with <strong>Sign in with Apple</strong> or <strong>Google</strong>. We do not offer password accounts.</p>
+<p><strong>What we receive:</strong> a user ID created by Google Firebase Authentication, your email address, and your name if Apple or Google provides it. With Sign in with Apple you may choose to hide your email, in which case we only receive a private relay address that Apple forwards.</p>
+<p><strong>Why:</strong> to keep your synced data together, to restore it on another device, and to connect your subscription to your account.</p>
+<p>When you sign in, your subscription record at RevenueCat is moved onto your account's user ID, so a purchase made before you signed in is not lost.</p>
+<h2>Backup and sync</h2>
+<p>Backup runs when you are signed in, have Premium, and Auto backup is on (it is on by default, and you can turn it off in Account and backup). Steeple then copies the following to <strong>Google Cloud Firestore</strong>, stored in the United States, under your user ID:</p>
 <ul>
-<li>Your current and longest streak, and the dates you have read</li>
-<li>Verses you have saved</li>
-<li>Your daily reminder setting and time</li>
-<li>Your translation choice</li>
-<li>Whether you have an active subscription</li>
+<li>Favorites, bookmarks, collections and the quotes you write yourself</li>
+<li>Reading history (the most recent 500 items) and items you hid or reported</li>
+<li>Mood check ins and anything you wrote with them</li>
+<li>Reminders and muted words</li>
+<li>Your streak</li>
+<li>Your settings and your custom themes (the theme settings only; a photo you pick for a theme stays on your iPhone)</li>
+<li>Your answers from first time setup: the name you gave, gender, age range, how familiar you are with faith, your faith practice, your denomination, what you would like to grow in, and how you heard about Steeple</li>
 </ul>
-<p>This data lives in the app's own storage and in a shared container the widget reads. There is no sync and no cloud backup of it on our side. Deleting the app deletes all of it. We have no copy and cannot recover it, which is also why a streak does not follow you to a new phone unless you restored that phone from an iPhone backup.</p>
-<h2>Anonymous usage statistics</h2>
-<p>Steeple uses <strong>Google Firebase Analytics</strong> to count how the app is used in aggregate. We use it to answer questions like how many people added the widget, and how many keep a streak past a week. Those two numbers decide what gets built next.</p>
+<p>Some of those answers, such as your denomination and faith practice, say something about your religious beliefs. Every one of these questions can be skipped. We use the answers only to choose what Steeple shows you, never for advertising, and they are only stored on our side while you have an account.</p>
+<p><strong>Not synced:</strong> your chat conversation, your Prayer Lock settings, your alarm, your widget and lock screen setup, and photos. These stay on the device.</p>
+<p>Only you can read your synced data. Our database rules allow a signed in user to read and write their own records and nothing else.</p>
+<h2>Chat</h2>
+<p>When you send a message in chat, the app sends the conversation so far (up to the most recent messages that fit a size limit) and your language setting to <strong>our server</strong>, which passes it to <strong>OpenAI</strong> to write the reply.</p>
+<ul>
+<li>If a message suggests someone may be in danger, our server answers with crisis support information instead, and that message is never sent to OpenAI.</li>
+<li><strong>We do not store your messages on our server.</strong> Our logs record how long a reply took, how many words were used and whether it was a free or premium request. They never record what you wrote.</li>
+<li>To enforce the daily message limit we keep a counter under a one way scrambled version of your user ID or anonymous purchase ID. Counters are deleted automatically after two days.</li>
+<li>Under OpenAI's API terms, OpenAI does not use this data to train its models, and may keep it for up to 30 days to detect abuse before deleting it.</li>
+<li>The conversation shown in the app is stored only on your iPhone and is not synced.</li>
+</ul>
+<p>Please do not type information into chat that you would not want to send to these services.</p>
+<h2>Voice</h2>
+<p><strong>Speaking instead of typing.</strong> Dictation in chat uses Apple's speech recognition. Your voice is processed by Apple under Apple's own privacy policy and is never sent to us. Only the text you choose to send becomes a chat message.</p>
+<p><strong>Reading aloud.</strong> The free Default voice is spoken by your iPhone and nothing is sent anywhere. The premium voices send the text being read, for example a verse or a chat reply, to our server, which asks OpenAI to turn it into speech. We keep the resulting audio in private cloud storage so the same text never has to be generated twice. That stored audio is filed under a fingerprint of the text and voice, never under who asked for it.</p>
+<h2>Photos and camera</h2>
+<p>You can pick a photo or take one to use as a theme background. The photo is copied into Steeple's own storage on your iPhone and is never uploaded. When you save a verse image or a wallpaper, Steeple adds it to your photo library and does not read anything else there.</p>
+<h2>Wallpapers from Unsplash</h2>
+<p>If you browse photos from Unsplash, your iPhone sends your search words to Unsplash and downloads the images directly from them, as Unsplash requires. Unsplash sees your connection's IP address, under the Unsplash privacy policy. We do not store your searches.</p>
+<h2>Usage statistics</h2>
+<p>Steeple uses <strong>Google Firebase Analytics</strong> to learn how the app is used, for example how many people finish setup, add a widget, open a reminder or start a trial.</p>
 <p><strong>What it collects:</strong></p>
 <ul>
-<li>A random <strong>app instance ID</strong>, generated when you install the app. It is not your name, your Apple ID, your phone number or your device's advertising identifier. It is reset if you delete and reinstall the app.</li>
+<li>A random <strong>app instance ID</strong> generated when you install the app. It is not your Apple ID, your phone number or your advertising identifier, and it resets if you reinstall.</li>
 <li>Your device model, operating system version, app version, and the country or region your connection appears to come from.</li>
-<li>Seventeen events, and no others: finishing a step of first time setup, finishing setup and how many seconds it took, viewing a verse, viewing an explanation, adding the widget, answering the reminder permission question either way, opening a reminder, reaching a streak day and its number, using Ask, hitting the free Ask limit, saving a verse, seeing the paywall and which of five places opened it, tapping the trial button, starting a trial, subscribing, tapping share, and tapping the rate button.</li>
-<li>Six general facts about your copy of the app, so the counts above can be read in groups: whether you subscribe, whether reminders are on, whether the widget is installed, roughly how long your streak is as one of four bands rather than the exact number, which translation you read, and which of the app's preset verse text sizes you read at.</li>
+<li>Events about which screens and features you use, such as finishing a step of setup, viewing or favoriting an item, changing a theme, logging a mood, completing a quiz, opening the paywall, starting a trial or subscribing.</li>
+<li>A few general facts about your copy of the app, such as whether you subscribe, whether reminders are on and whether a widget is installed.</li>
 </ul>
-<p><strong>What it does not collect:</strong> which verses you read or save, what you type into Ask, the content of anything, or any identifier that points back to you as a person.</p>
-<p><strong>That last point is built into the app rather than promised.</strong> An event can carry a small number of extra details, and they are all listed above: a count, a number of seconds, a yes or no, which setup step, or which of the five places the paywall opened from. Every one of them is chosen from a fixed list written into the app, not assembled while it runs.</p>
-<p>There is no way for a verse, a reference, a saved item or a word you typed to be attached to an event, because the app provides no means of attaching such text to one. The part of the app that sends these events accepts only whole numbers and values picked from those fixed lists, and nothing you type can become one. It is not that we choose not to send it. There is no route.</p>
-<p>Firebase Analytics is built here in its version <strong>without the advertising identifier</strong>. The library that reads Apple's IDFA is deliberately not included in the app, and an automated check fails the build if it ever gets added back. This data is not used for advertising, is not linked to an advertising profile, and is not used to track you across other companies' apps or websites.</p>
+<p><strong>What it does not collect:</strong> the text of anything you write, your chat messages, your setup answers, your name or your email.</p>
+<p>The app also gives the app instance ID to RevenueCat so that subscription events, such as a trial turning into a subscription, can be counted in the same statistics. Because RevenueCat links your subscription to your account when you sign in, these statistics could in principle be connected to your account, so we treat them as personal data. They are never used for advertising.</p>
+<p>Firebase Analytics is built into Steeple <strong>without the advertising identifier library</strong>, and an automated check fails the build if it is ever added back.</p>
 <h2>Crash reports</h2>
-<p>Steeple uses <strong>Google Firebase Crashlytics</strong>. If the app crashes, it sends a report so the fault can be fixed.</p>
-<p>A crash report contains the technical stack trace of what the app was doing when it failed, plus your device model and operating system version. It does not contain your saved verses, your questions, or anything you have written.</p>
-<h2>Ask</h2>
-<p><strong>Ask is the only feature that sends anything you have typed.</strong> When you ask a question about a verse, we send exactly three things to our AI provider:</p>
-<ol>
-<li>The verse reference, for example <code>Matthew 6:34</code></li>
-<li>The text of that verse</li>
-<li>The question you typed</li>
-</ol>
-<p>We do <strong>not</strong> send your name, email, device identifier, advertising identifier, location, subscription status, streak, or any history of your previous questions. Each question is handled on its own, with no memory of any earlier one.</p>
-<p><strong>We keep a cache of questions and their answers</strong>, so that a question already answered does not have to be sent to the AI provider again. You should know how that works:</p>
-<ul>
-<li>The cache stores the verse reference, a simplified version of the question, and the answer. It does not store who asked, when you asked, or anything about your device.</li>
-<li><strong>It is keyed on the verse and the wording of the question, never on you</strong>, which means the cache is shared. Two people asking the same thing about the same verse are served the same entry. There is no way to group entries back into one person's questions, because nothing in the request says which questions came from the same phone.</li>
-<li>Cached entries are kept indefinitely and are not deleted on a schedule. They are ordinary reference material at that point, not a record of anyone.</li>
-</ul>
-<p>Our own server logs record the verse reference, whether the answer came from the cache, and how long the request took. <strong>They never record the question text</strong>, on any code path, including when a question is stopped by the crisis check.</p>
-<p>To confirm the app really is the app, and to stop other people running up our bill, each request carries an Apple issued attestation through Firebase App Check. It says "this is a genuine copy of Steeple on a genuine device". It is not an account, it does not identify you, and it is not stored.</p>
-<p>Please do not type sensitive personal information into Ask. The app shows this reminder on screen every time, and the reason is the cache described above.</p>
+<p>Steeple uses <strong>Google Firebase Crashlytics</strong>. If the app crashes or hits an error, it sends a technical report: what the app was doing, your device model and operating system version. Reports carry no user ID and contain nothing you have written.</p>
 <h2>Purchases</h2>
-<p>Subscriptions are processed by Apple. <strong>We never see and never receive your card number, billing address or Apple ID.</strong></p>
-<p>We use <strong>RevenueCat</strong> to check whether a valid subscription exists. It receives the purchase receipt Apple issues and an anonymous purchase ID that it generates. It does not receive your name or your Apple ID. To manage or cancel, use Profile inside the app or your Apple subscription settings.</p>
+<p>Subscriptions are processed by Apple. <strong>We never see your card number, billing address or Apple ID.</strong></p>
+<p>We use <strong>RevenueCat</strong> to check whether a subscription is active. RevenueCat receives the receipt Apple issues, an anonymous purchase ID it creates (or your account's user ID once you sign in), and the analytics app instance ID described above. RevenueCat tells our server when a subscription starts, renews or ends, and our server keeps a small record of whether your subscription is active so that chat and voice limits can be applied.</p>
+<p>If you arrived from an Apple Search Ads advertisement, the app passes Apple's own attribution token to RevenueCat so we can see which search term led to a subscription. This uses Apple's AdServices framework, not an advertising identifier, and does not track you across other apps.</p>
+<h2>Other services the app uses</h2>
+<ul>
+<li><strong>Firebase App Check</strong> sends an Apple device attestation with each request to our server, proving the request comes from a genuine copy of Steeple. It does not identify you.</li>
+<li><strong>Firebase Remote Config</strong> downloads settings such as free limits and screen order. It uses a Firebase installation ID and does not identify you.</li>
+<li><strong>Reminders and alarms</strong> are local notifications scheduled on your iPhone. We have no server that sends you notifications.</li>
+<li><strong>Prayer Lock</strong>, when available, uses Apple's Screen Time framework. Apple does not give apps a record of which apps you use, and your Prayer Lock choices stay on your iPhone.</li>
+</ul>
 <h2>Children</h2>
-<p>Steeple is rated 4+, which means its content is suitable for all ages. It is written for adults and is not directed at children, and it is not published in the App Store Kids Category.</p>
-<p>Steeple has no account, no sign up, no messaging, no user profiles, no advertising and no links to user generated content, so there is no way for a child to give us personal information or to be contacted through the app. The anonymous usage and crash data described above is not personal information about any individual, child or adult, and is never used for advertising or to build a profile.</p>
-<p>We do not knowingly collect personal information from children under 13. If you believe a child has somehow provided personal information through the app, write to the address below and we will delete it.</p>
+<p>Steeple is written for adults. It is not directed at children and is not in the App Store Kids Category. We do not knowingly collect personal information from children under 13. If you believe a child has created an account, write to us and we will delete it.</p>
+<h2>Deleting your data</h2>
+<p><strong>In the app:</strong> Settings, Account, Delete account. This permanently deletes your synced data, your subscription status record and your account from our systems straight away. If you signed in with Apple, the app also asks Apple to revoke Steeple's access. Deleting your account does not cancel a subscription, because the subscription belongs to your Apple ID: cancel it in your Apple subscription settings.</p>
+<p><strong>Signing out</strong> removes your account from the device but keeps your synced copy, so you can sign in again later.</p>
+<p><strong>Deleting the app</strong> removes everything stored on the iPhone.</p>
+<p>Usage statistics are kept for the retention period set in Google Analytics and are then deleted. Crash reports are kept by Crashlytics for 90 days. To ask us to delete these, or anything else, write to the address below with your app instance ID or account email and we will act within 30 days.</p>
 <h2>Your rights</h2>
-<p>We hold almost nothing that could identify you, so in most cases there is nothing for us to look up, correct or delete.</p>
-<p>Depending on where you live you may have rights under the GDPR, the UK GDPR, or the CCPA, including the right to access, correct, delete, or object to processing. We honour all of them. <strong>We do not sell personal information as defined by the CCPA, and we have never done so.</strong></p>
-<p>If you want the anonymous usage data associated with your installation to stop being collected, deleting the app stops it, and reinstalling generates a new random ID unconnected to the old one.</p>
-<p>For requests about anything on this page, write to the address below.</p>
+<p>Depending on where you live you may have rights under the GDPR, the UK GDPR, the CCPA or similar laws, including the right to access, correct, export or delete your information, and to object to or restrict how it is used. We honour these rights for everyone. Write to the address below.</p>
+<p>We process your information to provide the features you ask for (your account, sync, chat, voice and subscription), with your consent for the optional setup answers, which you can withdraw by deleting your account, and in our legitimate interest in keeping the app working and improving it (crash reports and usage statistics).</p>
+<p><strong>We do not sell or share personal information for advertising, as defined by the CCPA, and we never have.</strong></p>
 <h2>Who processes data for us</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -148,46 +164,62 @@ If you later change what the app does, change this page in the same commit.</p>
 </thead>
 <tbody>
 <tr>
-<td>Google Firebase Analytics</td>
-<td>anonymous app instance ID, device and app version, coarse region, the seventeen events and six general facts above</td>
-<td>to see which features are used</td>
-</tr>
-<tr>
-<td>Google Firebase Crashlytics</td>
-<td>crash stack traces, device model and OS version</td>
-<td>to fix crashes</td>
-</tr>
-<tr>
-<td>RevenueCat</td>
-<td>Apple purchase receipt, anonymous purchase ID</td>
-<td>to check subscription status</td>
-</tr>
-<tr>
-<td>Our AI provider</td>
-<td>verse reference, verse text, your typed question</td>
-<td>to answer Ask</td>
-</tr>
-<tr>
-<td>Google Firebase App Check</td>
-<td>a device attestation proving the app is genuine</td>
-<td>to stop abuse of the Ask endpoint</td>
+<td>Google Firebase Authentication</td>
+<td>user ID, email, name from Apple or Google</td>
+<td>your account</td>
 </tr>
 <tr>
 <td>Google Cloud Firestore</td>
-<td>the cached question and answer described above</td>
-<td>so a question is not sent twice</td>
+<td>your synced data, subscription status record, daily limit counters</td>
+<td>backup, sync, limits</td>
+</tr>
+<tr>
+<td>Google Cloud Functions and Cloud Storage</td>
+<td>chat messages and text to read aloud, passed through; generated audio</td>
+<td>chat and voice</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td>chat conversation, text to read aloud</td>
+<td>writing replies, generating speech</td>
+</tr>
+<tr>
+<td>Google Firebase Analytics</td>
+<td>app instance ID, device and app version, region, feature events</td>
+<td>understanding how the app is used</td>
+</tr>
+<tr>
+<td>Google Firebase Crashlytics</td>
+<td>crash and error reports, device model, OS version</td>
+<td>fixing faults</td>
+</tr>
+<tr>
+<td>Google Firebase App Check and Remote Config</td>
+<td>device attestation, installation ID</td>
+<td>blocking abuse, app settings</td>
+</tr>
+<tr>
+<td>RevenueCat</td>
+<td>Apple receipt, purchase ID or user ID, app instance ID, Apple Search Ads token</td>
+<td>subscriptions</td>
+</tr>
+<tr>
+<td>Unsplash</td>
+<td>search words and image requests, from your device</td>
+<td>wallpapers</td>
 </tr>
 <tr>
 <td>Apple</td>
-<td>your purchase, entirely between you and Apple</td>
-<td>to take payment</td>
+<td>sign in, payment, speech recognition, attestation</td>
+<td>platform services</td>
 </tr>
 </tbody>
 </table></div>
+<p>Your information is stored and processed in the United States. Where data leaves the UK or the European Economic Area, these providers rely on standard contractual clauses or an equivalent safeguard.</p>
 <h2>Changes to this policy</h2>
 <p>If the app starts doing something new with information, this page changes first and the date at the top changes with it. Material changes will also be described in the app's release notes.</p>
 <h2>Contact</h2>
-<p>Questions about privacy, or anything else:</p>
+<p>Questions or requests about privacy:</p>
 <p><strong>arshpreet@billionweb.co</strong></p>
 <p>Steeple is operated by Billionweb, Singapore.</p>
 </main>
