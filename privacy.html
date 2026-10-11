@@ -67,7 +67,7 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #E6E0D9;
 <header><nav><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></header>
 <main>
 <h1>Privacy Policy for Bible Verse</h1>
-<p><strong>Last updated: 10 October 2026</strong></p>
+<p><strong>Last updated: 11 October 2026</strong></p>
 <p>Bible Verse is made by Steeple and operated by Billionweb. This page explains what happens to information when you use Bible Verse (called Steeple below): what stays on your iPhone, what leaves it, who receives it, and how to delete it.</p>
 <h2>The short version</h2>
 <ul>
@@ -75,7 +75,8 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #E6E0D9;
 <li><strong>An account is optional.</strong> If you sign in with Apple or Google and have Premium, Steeple backs up a copy of your data to our cloud database so it follows you to a new phone. You can turn Auto backup off.</li>
 <li><strong>Chat and premium voices send text to our server and to OpenAI</strong> so a reply can be written or read aloud. We do not keep your chat messages on our server.</li>
 <li>We use Google Firebase for usage statistics and crash reports, and RevenueCat to manage subscriptions.</li>
-<li>Steeple shows <strong>no ads</strong>, does not read your device's advertising identifier, does not track you across other companies' apps or websites, and <strong>never sells your information</strong>.</li>
+<li>Steeple shows <strong>no ads</strong> and <strong>never sells your information</strong>.</li>
+<li>We advertise Steeple on Meta (Facebook and Instagram) and TikTok, and use <strong>Adjust, Meta and TikTok to measure which of our ads bring people to the app</strong>. Your device's advertising identifier is read only if you choose Allow when the app asks permission to track, and you can turn this off at any time in Settings.</li>
 <li>You can <strong>delete your account and everything synced with it</strong> from inside the app at any time.</li>
 </ul>
 <h2>Without an account or backup</h2>
@@ -126,15 +127,26 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #E6E0D9;
 <li>Events about which screens and features you use, such as finishing a step of setup, viewing or favoriting an item, changing a theme, logging a mood, completing a quiz, opening the paywall, starting a trial or subscribing.</li>
 <li>A few general facts about your copy of the app, such as whether you subscribe, whether reminders are on and whether a widget is installed.</li>
 </ul>
-<p><strong>What it does not collect:</strong> the text of anything you write, your chat messages, your setup answers, your name or your email.</p>
-<p>The app also gives the app instance ID to RevenueCat so that subscription events, such as a trial turning into a subscription, can be counted in the same statistics. Because RevenueCat links your subscription to your account when you sign in, these statistics could in principle be connected to your account, so we treat them as personal data. They are never used for advertising.</p>
+<p><strong>What it does not collect:</strong> the text of anything you write, your chat messages, your name or your email. Of your setup answers, only one is included: how you heard about Steeple (for example "TikTok" or "a friend"), so we can compare it with what the ad networks report.</p>
+<p>The app also gives the app instance ID to RevenueCat so that subscription events, such as a trial turning into a subscription, can be counted in the same statistics. Because RevenueCat links your subscription to your account when you sign in, these statistics could in principle be connected to your account, so we treat them as personal data. Google may use them for ad measurement only if you turn on Settings, Marketing &amp; analytics (or chose Allow when the app asked permission to track); otherwise they are used only to understand how the app is used.</p>
 <p>Firebase Analytics is built into Steeple <strong>without the advertising identifier library</strong>, and an automated check fails the build if it is ever added back.</p>
 <h2>Crash reports</h2>
 <p>Steeple uses <strong>Google Firebase Crashlytics</strong>. If the app crashes or hits an error, it sends a technical report: what the app was doing, your device model and operating system version. Reports carry no user ID and contain nothing you have written.</p>
 <h2>Purchases</h2>
 <p>Subscriptions are processed by Apple. <strong>We never see your card number, billing address or Apple ID.</strong></p>
 <p>We use <strong>RevenueCat</strong> to check whether a subscription is active. RevenueCat receives the receipt Apple issues, an anonymous purchase ID it creates (or your account's user ID once you sign in), and the analytics app instance ID described above. RevenueCat tells our server when a subscription starts, renews or ends, and our server keeps a small record of whether your subscription is active so that chat and voice limits can be applied.</p>
-<p>If you arrived from an Apple Search Ads advertisement, the app passes Apple's own attribution token to RevenueCat so we can see which search term led to a subscription. This uses Apple's AdServices framework, not an advertising identifier, and does not track you across other apps.</p>
+<p>If you arrived from an Apple Search Ads advertisement, the app passes Apple's own attribution token to RevenueCat so we can see which search term led to a subscription. This uses Apple's AdServices framework.</p>
+<h2>Advertising measurement</h2>
+<p>We pay for ads for Steeple on Meta (Facebook and Instagram), TikTok and Apple Search Ads. To know which ads work, and to stop paying for the ones that do not, Steeple uses three measurement services:</p>
+<ul>
+<li><strong>Adjust</strong> decides which ad, if any, led to your install, and receives subscription events (trial started, subscribed, renewed, cancelled, refunded) from RevenueCat. The app also tells Adjust when you finish setup and when you see the subscription screen.</li>
+<li><strong>Meta's SDK</strong> tells Meta that the app was installed and opened. RevenueCat tells Meta when a trial starts or becomes a subscription.</li>
+<li><strong>TikTok</strong> learns about installs, trials and subscriptions that came from its ads through Adjust, which passes them on. There is no TikTok code in the app.</li>
+</ul>
+<p><strong>What they receive:</strong> an identifier for your copy of the app (Apple's identifier for vendor, and each service's own install ID), your IP address, device model and operating system version, app version, the time of the install and of each app open, and the trial and subscription events above with their price. They do not receive your name, your email, anything you write, your setup answers or your chat.</p>
+<p><strong>The advertising identifier (IDFA):</strong> right after the first screen, iOS asks whether Steeple may track you. Only if you choose <strong>Allow</strong> does the app read your advertising identifier and pass it to these services. If you choose <strong>Ask App Not to Track</strong>, the identifier is never read, Meta's SDK does not collect it, and Meta limits how it uses the data from your copy of the app. Adjust still reports your install and subscription events to Meta and TikTok, without the advertising identifier, so they can count in aggregate how many installs and subscriptions their ads produced. You can change your answer at any time in iOS Settings, Privacy &amp; Security, Tracking.</p>
+<p><strong>Turning measurement off:</strong> in Steeple, open Settings and turn off <strong>Marketing &amp; analytics</strong>. Adjust then stops sharing your install and subscription events with Meta and TikTok entirely, Meta limits how it uses the data its SDK sends, and Google stops using your statistics for ad measurement. Turn it back on to undo this.</p>
+<p>These services act under their own privacy policies for this data: <a href="https://www.adjust.com/terms/privacy-policy/">Adjust</a>, <a href="https://www.facebook.com/privacy/policy/">Meta</a> and <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok</a>.</p>
 <h2>Other services the app uses</h2>
 <ul>
 <li><strong>Firebase App Check</strong> sends an Apple device attestation with each request to our server, proving the request comes from a genuine copy of Steeple. It does not identify you.</li>
@@ -151,8 +163,8 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #E6E0D9;
 <p>Usage statistics are kept for the retention period set in Google Analytics and are then deleted. Crash reports are kept by Crashlytics for 90 days. To ask us to delete these, or anything else, write to the address below with your app instance ID or account email and we will act within 30 days.</p>
 <h2>Your rights</h2>
 <p>Depending on where you live you may have rights under the GDPR, the UK GDPR, the CCPA or similar laws, including the right to access, correct, export or delete your information, and to object to or restrict how it is used. We honour these rights for everyone. Write to the address below.</p>
-<p>We process your information to provide the features you ask for (your account, sync, chat, voice and subscription), with your consent for the optional setup answers, which you can withdraw by deleting your account, and in our legitimate interest in keeping the app working and improving it (crash reports and usage statistics).</p>
-<p><strong>We do not sell or share personal information for advertising, as defined by the CCPA, and we never have.</strong></p>
+<p>We process your information to provide the features you ask for (your account, sync, chat, voice and subscription), with your consent for the optional setup answers, which you can withdraw by deleting your account, with your consent for the advertising identifier (your answer to the tracking question), which you can withdraw at any time in iOS Settings, in our legitimate interest in measuring our own ads in aggregate, which you can object to at any time with Settings, Marketing &amp; analytics, and in our legitimate interest in keeping the app working and improving it (crash reports and usage statistics).</p>
+<p><strong>We do not sell personal information.</strong> Telling Meta and TikTok which installs and trials came from their ads may count as "sharing" for cross context behavioral advertising under the CCPA. To opt out, turn off Settings, Marketing &amp; analytics in the app.</p>
 <h2>Who processes data for us</h2>
 <div class="tablewrap"><table>
 <thead>
@@ -200,8 +212,23 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #E6E0D9;
 </tr>
 <tr>
 <td>RevenueCat</td>
-<td>Apple receipt, purchase ID or user ID, app instance ID, Apple Search Ads token</td>
-<td>subscriptions</td>
+<td>Apple receipt, purchase ID or user ID, app instance ID, Apple Search Ads token, device identifiers (identifier for vendor, IP address, advertising identifier if you allow tracking), Adjust and Meta install IDs, how you heard about Steeple</td>
+<td>subscriptions, and passing subscription events to Adjust and Meta</td>
+</tr>
+<tr>
+<td>Adjust</td>
+<td>install, app open, setup finished and subscription screen viewed events, device identifiers, IP address, subscription events from RevenueCat</td>
+<td>measuring which ads led to installs and subscriptions, and passing them on to Meta and TikTok</td>
+</tr>
+<tr>
+<td>Meta</td>
+<td>install and app open events, device identifiers, IP address, trial and subscription events from RevenueCat</td>
+<td>measuring our Facebook and Instagram ads</td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td>install, trial and subscription events, device identifiers and IP address, passed on by Adjust</td>
+<td>measuring our TikTok ads</td>
 </tr>
 <tr>
 <td>Unsplash</td>
